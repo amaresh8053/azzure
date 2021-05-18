@@ -51,12 +51,13 @@ public class HttpTriggerFunction {
 
             // Print results from select statement
             while (resultSet.next()) {
-                context.getLogger().info("result"+resultSet.getString(1));
+                context.getLogger().info("###############result#############"+resultSet.getString(1));
             }
         }
         // Handle any errors that may have occurred.
         catch (SQLException e) {
             e.printStackTrace();
+            context.getLogger().info("###########error#############"+e.getMessage());
         }
 
 
