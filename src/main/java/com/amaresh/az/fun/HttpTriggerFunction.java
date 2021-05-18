@@ -51,9 +51,7 @@ public class HttpTriggerFunction {
 
             // Print results from select statement
             while (resultSet.next()) {
-                System.out.println(resultSet.getString(2) + " " + resultSet.getString(3));
-                context.getLogger().info("Test 2"); // This is never printed.
-
+                context.getLogger().info("result"+resultSet.getString(1));
             }
         }
         // Handle any errors that may have occurred.
